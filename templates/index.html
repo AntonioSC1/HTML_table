@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="info text-bg-dark text-danger w-25">Student Info</h1>
+    <table class="table table-dark table-striped table-hover w-75">
+        <thead>
+            <tr>
+                <th class="table-dark text-warning">First Name</th>
+                <th class="table-dark text-warning">Last Name</th>
+                <th class="table-dark text-warning">Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in student_info %}
+            <tr>
+                <td class="color text-danger">{{student['first_name']}}</td>
+                <td>{{student['last_name']}}</td>
+                <td class="color text-info">{{student['full_name']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>
